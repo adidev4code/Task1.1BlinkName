@@ -1,82 +1,37 @@
-# Task1.1BlinkName
-
-# Task 1.1P – Arduino Nano 33 IoT: Blinking Name in Morse Code
-
-This repository contains the source code and documentation for **Task 1.1P** from the Embedded Systems Development unit. The task introduces the Arduino Nano 33 IoT board and demonstrates a basic embedded programming application—blinking a name in Morse code using the board's in-built LED.
-
----
+# Embedded Systems Development – Task 1.1P  
+**Blinking Your Name in Morse Code Using Arduino Nano 33 IoT**
 
 ## 📘 Task Description
 
-This task was divided into two parts:
-
-### Part 1 – Device Setup
-- Created an Arduino account using student credentials
-- Installed **Arduino IDE 2** and required board definitions (`Arduino SAMD Boards`)
-- Registered the **Arduino Nano 33 IoT** on the Arduino IoT Cloud platform
-- Installed the Arduino Create Agent to manage device connection
-- Captured a screenshot showing the **Device Name, Device ID, and Model** details
-
-### Part 2 – LED Blink Program (Morse Code)
-- Wrote a modular Arduino program that blinks the **built-in LED** (`LED_BUILTIN` / pin D13)
-- Translated the name **"Aditya"** into Morse code:
-  - `.` = short blink (200 ms)
-  - `-` = long blink (600 ms)
-  - Inter-symbol and letter spacing included for clarity
-- Implemented modular functions: `dot()`, `dash()`, `getMorse()`, `blinkLetter()`, `blinkName()`, and `letterSpace()`
+This task introduces the basic setup and programming of the Arduino Nano 33 IoT development board. It was divided into two main parts to help students get comfortable with both the hardware and software environments of embedded systems.
 
 ---
 
-## 💡 Key Learning Outcomes
+### 🔹 Part 1: Device Setup
 
-- Arduino Nano 33 IoT hardware and cloud setup
-- Working with Arduino IDE and in-built peripherals
-- Introduction to modular programming in embedded systems
-- Translating characters to Morse code and controlling hardware through timed signals
+In the first part, we created an Arduino account and connected the Nano 33 IoT board to the Arduino IoT Cloud. After installing the required Arduino IDE and SAMD board packages, we claimed the device and verified its connection. A screenshot of the device information (Device Name, Device ID, Model) was captured for submission.
 
 ---
 
-## 📂 Repository Contents
+### 🔹 Part 2: LED Blinking in Morse Code
 
-| File Name       | Description                                      |
-|-----------------|--------------------------------------------------|
-| `BlinkName.ino` | Arduino sketch to blink "Aditya" in Morse code   |
-| `README.md`     | Project overview and task documentation          |
-| *(Optional)*    | Screenshot of device registration (Part 1 proof) |
+In the second part, we programmed the in-built LED on the Arduino board to blink our **first name ("Aditya")** in **Morse code** using modular functions. Each character was converted into Morse format, and we used short (dot) and long (dash) LED blinks to represent each symbol. A delay was added between letters for clarity.
 
----
-
-## ▶️ Video Demonstration
-
-A video has been recorded showing the Arduino Nano 33 IoT blinking the name "Aditya" in Morse code using its in-built LED.
-
-📹 **Watch Here**: *[Insert YouTube or Deakin Panopto Link]*
+The code was written in a clean, modular format using custom functions such as:
+- `blinkName()` – to loop through each character
+- `getMorse()` – to return Morse code for a given character
+- `dot()` and `dash()` – to control the LED timing
+- `letterSpace()` – to manage spacing between letters
 
 ---
 
-## 🔗 GitHub Repository Link
+### 📌 Outcome
 
-👉 **Repository**: [https://github.com/YourUsername/Task1.1BlinkName](https://github.com/YourUsername/Task1.1BlinkName)  
-*(Ensure this repository is set to **public** for assessment)*
+By completing this task, we learned how to:
+- Set up and register an Arduino IoT device
+- Use the built-in LED and digital output pins
+- Apply modular programming principles for better structure and usability
+- Represent and blink text in Morse code using basic Arduino functions
 
----
-
-## ✅ Submission Checklist
-
-- [x] Device registered on Arduino IoT Cloud
-- [x] Blink code written using modular functions
-- [x] Video of LED blinking in Morse code uploaded
-- [x] Code uploaded to public GitHub repository
-- [x] Screenshot showing device info included
-- [x] README file created and updated
-
----
-
-## 🧑‍💻 Author
-
-**Name:** Aditya Sharma  
-**Unit:** Embedded Systems Development  
-**Task:** 1.1P – Arduino Blink Name in Morse Code  
-**Board Used:** Arduino Nano 33 IoT  
-**Date:** July 2025
+This task is a practical entry point into embedded systems programming and IoT development.
 
