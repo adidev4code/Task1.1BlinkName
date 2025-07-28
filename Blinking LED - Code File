@@ -1,0 +1,57 @@
+void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  blinkName("Aditya");
+  delay(3000);  // Delay before repeating the name
+}
+
+void blinkName(String name) {
+  for (int i = 0; i < name.length(); i++) {
+    char currentChar = toupper(name[i]);
+    blinkLetter(currentChar);
+    letterSpace();
+  }
+}
+
+void blinkLetter(char c) {
+  String morse = getMorse(c);
+  for (int i = 0; i < morse.length(); i++) {
+    if (morse[i] == '.') {
+      dot();
+    } else if (morse[i] == '-') {
+      dash();
+    }
+    delay(250);  // Delay between dots/dashes
+  }
+}
+
+String getMorse(char c) {
+  switch (c) {
+    case 'A': return ".-";
+    case 'D': return "-..";
+    case 'I': return "..";
+    case 'T': return "-";
+    case 'Y': return "-.--";
+    default: return "";
+  }
+}
+
+void dot() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(200);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(200);
+}
+
+void dash() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(600);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(200);
+}
+
+void letterSpace() {
+  delay(600);
+}
